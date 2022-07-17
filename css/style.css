@@ -285,7 +285,7 @@ transition: background-color 250ms var(--cubik-timing);
 background-color: #188CE8;
 }
 
-.is-hidden!!{
+.is-hidden{
 visibility: hidden;
 opacity: 0;
 pointer-events: none;
@@ -334,6 +334,7 @@ background-color: var(--primery-white-color);
 border: 1px solid rgba(0, 0, 0, 0.1);
 border-radius: 50% 50%;
 transition: fill 250ms var(--cubik-timing);
+outline: none;
 }
 
 .close-button-icon{
@@ -346,7 +347,8 @@ transform: translate(-50%, -50%);
 
 }
 
-.close-button:hover{
+.close-button:hover,
+.close-button:focus{
 fill: var(--accent-color);
 }
 
@@ -391,13 +393,14 @@ transition: border-color 250ms var(--cubik-timing);
 }
 
 
-.form-field-input:focus {
+.form-field-input:focus,
+.form-field-input:hover {
 border-color: var(--accent-color);
-
 }
-.form-field-input:focus + .form-field-icon{
-fill: var(--accent-color);
 
+.form-field-input:focus + .form-field-icon,
+.form-field-input:hover+.form-field-icon{
+fill: var(--accent-color);
 }
 
 .form-field-input.form-coment{
@@ -405,12 +408,12 @@ padding: 12px 16px;
 height: 120px;
 resize: none;
 margin-top: 4px;
-
 }
 
 .form-field-input.form-coment::placeholder{
 color: rgba(117, 117, 117, 0.5);
 }
+
 
 .form-field-inner{
 position: relative;
@@ -424,30 +427,67 @@ left: 12px;
 fill: var(--title-text-color);
 transform: translateY(-50%);
 
-transition: border-color 250ms var(--cubik-timing);
+transition: fill 250ms var(--cubik-timing);
 }
 
-.checkbox-control{
 
-}
 .checkbox-label{
 display: block;
-margin-right: 8px;}
-
-  .form-field-checkbox{
-    display: flex;
-    justify-content: center;
+margin-right: 8px;
+margin-bottom: 0px;
+position: relative;
+margin-left: 23px;
 }
+
+.form-field-checkbox{
+display: flex;
+justify-content: center;
+}
+
+
+.checkbox-icon{
+position: absolute;
+left: 0;
+top: 0;
+width: 16px;
+height: 15px;
+background-image: url('../images/Vector.svg');
+margin-left: -23px;
+transition: background-image 250ms var(--cubik-timing);
+
+}
+
+.checkbox-input:checked + .checkbox-icon{
+background-image: url('../images/icon-check.svg');}
+
+/*
+
+.checkbox-input:focus +.checkbox-icon{
+background-image: url('../images/Vector.svg');
+
+}
+.checkbox-input:checked:focus+.checkbox-icon {
+    background-image: url('../images/icon-check.svg');
+
+}
+*/
+
 
 .contract{
 color: var(--accent-color);
 }
 
 .button-form{
+display: block;
 width: 200px;
 margin-left: auto;
-margin-right: auto;
+margin-right:auto;
+margin-top: 30px;
+background: var(--accent-color);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
 }
+
 /* Особенности*/
 
 
@@ -769,6 +809,51 @@ width: 44px;
 background: var(--accent-color);
 }
 
+.form-subscription-field{
+display:flex;}
+
+.form-subscription-input{
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
+
+background-color: transparent;
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+padding: 15px 16px ;}
+
+.subscription{
+margin-left: 93px;
+}
+
+.form-subscription-label{
+    width: 358px;
+}
+
+.form-subscription-input{
+height: 50px;
+width: 100%;
+display: block;
+outline: none}
+
+.button-subscription{
+display: flex;
+margin-left: 12px;
+width: 200px;
+justify-content: center;
+padding: 0%;
+}
+
+.subscription-icon{
+margin-left: 10px;
+fill: var(--primery-white-color);
+}
 
 /* portfolio */
 
