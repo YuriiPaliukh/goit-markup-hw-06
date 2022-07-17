@@ -410,6 +410,12 @@ resize: none;
 margin-top: 4px;
 }
 
+.textarea{
+resize: none;
+padding: 12px 16px;
+height: 120px;
+}
+
 .form-field-input.form-coment::placeholder{
 color: rgba(117, 117, 117, 0.5);
 }
