@@ -412,12 +412,6 @@ height: 120px;
 .coment-box{
 margin-bottom: 20px;}
 
-.form-field-input.textarea::placeholder{
-font-weight: 400;
-letter-spacing: 0.01em;
-color: rgba(117, 117, 117, 0.5);
-}
-
 
 .form-field-inner{
 position: relative;
@@ -434,6 +428,11 @@ transform: translateY(-50%);
 transition: fill 250ms var(--cubik-timing);
 }
 
+ .form-field-input.textarea::placeholder {
+font-weight: 400;
+letter-spacing: 0.01em;
+color: rgba(117, 117, 117, 0.5);
+}
 
 .checkbox-label{
 display: flex;
